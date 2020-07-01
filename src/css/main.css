@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+/* nav-bar */
+.navbar{
+    display:flex;
+    justify-content: flex-end;
+    margin-bottom: 0.7em;
+}
+
+.navbar div {
+    margin-right: 0.5em;
+    margin-top: 0.3em;
+}
+
+img:hover{
+    background-color: #ff1e56;
+}
+/*end of nav-bar */
+
+
+/*main content */
+.intro-text, .skills, .work-exp, footer {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #0e0e0e;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #eeeeee;
+    padding: 0.3em;
+    margin-bottom: 0.7em;
+}
+
+.intro-text {
+    line-height: 170%;
+    padding: 0.8em;
+}
+
+.name{
+    color: #ffac41;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.skills h2, .work-exp h2, .skills ul{
+    padding: 0.2em;
+    font-size: 1.2em;
+}
+
+.work-exp h4{
+    margin-bottom: 0.35em;
+    margin-left: -1.25em;
+}
+
+.skills ul {
+    width: 80%;
+    font-size: 0.9em;
+    margin: 0 auto;
+    text-decoration: #ffac41;
+    font-family: 'Lucida Sans', 'Lucida Sans Unicode', 'Lucida Grande',  Arial, sans-serif
+}
+/*end of main content */
+
+/*footer */
+    p{
+        padding-left: 1em;
+        text-align: left;
+        font-size: 0.9em;
+    }
+/*end of footer */
