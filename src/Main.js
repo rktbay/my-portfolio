@@ -3,15 +3,12 @@ import './css/main.css';
 import linkedin from './img/white-linkedin1.png' 
 import gmail from './img/white-gmail.png' 
 import github from './img/white-github1.png' 
+import html from './img/html.png' 
+import css from './img/css.png' 
+import js from './img/js.png' 
+import react from './img/react.png' 
 
 const skills = ['ReactJS', 'ASP.NET', 'C#', 'HTML', 'CSS', 'JavaScript (ES6)', 'Java', 'SQL Server', 'Oracle Database', 'MySQL', 'Adobe Photoshop', 'Microsoft Office', 'C', 'Android Studio', 'Git', 'GitHub', 'Tortoise SVN'];
-const workxp = [
-    {
-
-    },
-    {},
-    {}
-]
 const workXp = [
     {
         id: 1,
@@ -59,17 +56,21 @@ const Main = () => {
                     
                         {workXp.map(work=>{
                             return(
-                            <ul>
+                            <ul key={work.id}>
                                 <h4>{work.EmployerName}</h4>
-                                <li>{work.Job}</li>
-                                <li>{work.Timeline}</li>
+                                <li key={work.Job}>{work.Job}</li>
+                                <li key={work.Timeline}>{work.Timeline}</li>
                             </ul>
                             )
                         })}
                 </div>
             </main>
             <footer>
-                   <p>Mobile Number: 09270815174</p>
+                    <div className="number">Contact #: 09270815174</div>
+                    <img className="html" src={html} width="25px" height="25px"/>
+                    <img className="css" src={css} width="25px" height="25px"/>
+                    <img className="js" src={js} width="25px" height="25px"/>
+                    <img className="react" src={react} width="25px" height="25px"/>
             </footer>
         </>
     )

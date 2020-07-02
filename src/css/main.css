@@ -16,7 +16,7 @@ body{
     margin-top: 0.3em;
 }
 
-img:hover{
+navbar img:hover{
     background-color: #ff1e56;
 }
 /*end of nav-bar */
@@ -56,7 +56,7 @@ img:hover{
 }
 
 .skills ul {
-    width: 80%;
+    width: 78%;
     font-size: 0.9em;
     margin: 0 auto;
     text-decoration: #ffac41;
@@ -65,9 +65,69 @@ img:hover{
 /*end of main content */
 
 /*footer */
-    p{
+footer {
         padding-left: 1em;
         text-align: left;
         font-size: 0.9em;
-    }
+        display: flex;
+}
+
+footer .number{
+    flex-grow: 1;
+}
 /*end of footer */
+
+/*media query for tablets */
+@media only screen and (min-width: 440px) {
+        body{
+            font-size: 1.1em;
+        }
+
+       .skills ul {
+        width: 80%;
+        }
+
+        .navbar img{
+            width: 25px;
+            height: 25px;
+        }
+}
+@media only screen and (min-width: 440px) {
+   .skills ul {
+    width: 87%;
+    }
+}
+/*end of media query for tablets */
+
+/*media query for desktops */
+@media only screen and (min-width: 768px) {
+    body{
+        font-size: 1.35em;
+    }
+    .skills ul {
+        width: 89%;
+    }
+
+    footer img{
+        width: 32px;
+        height: 32px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    body{
+        font-size: 1.35em;
+    }
+    .skills ul {
+        width: 95%;
+    }
+
+
+    footer .number{
+        padding-top: 0.5em;
+    }
+    footer img{
+        width: 35px;
+        height: 35px;
+    }
+}
+/*end of media query for desktops */
