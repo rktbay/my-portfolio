@@ -35,7 +35,7 @@ const Main = () => {
             <nav className="navbar">
                        <div><a href="https://www.linkedin.com/in/mbabaylan/" target="_blank"><img src={linkedin} width="22px" height="22px"/></a></div>
                        <div><a href="https://mail.google.com/mail/?view=cm&fs=1&to=matmatmark@gmail.com" target="_blank"><img src={gmail} width="22px" height="22px"/></a></div>
-                       <div><a href="https://github.com/rakkitbay" target="_blank"><img src={github} width="22px" height="22px"/></a></div>
+                       <div><a href="https://github.com/mdbabaylan" target="_blank"><img src={github} width="22px" height="22px"/></a></div>
             </nav>
             <p className="intro-text">
                 <span className="name">Hello. <br/><br/></span>
