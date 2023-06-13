@@ -1,133 +1,200 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@200;400&display=swap');
+
+body {
+    background-color: #181818;
     margin: 0;
-    padding: 0;
-    background-color: #000000;
+    height: 100vh;
+    padding-top: 5em;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* nav-bar */
-.navbar{
-    display:flex;
-    justify-content: flex-end;
-    margin-bottom: 0.7em;
+h4,
+h5 {
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 100;
 }
 
-.navbar div {
-    margin-right: 0.5em;
-    margin-top: 0.3em;
-}
-
-navbar img:hover{
-    background-color: #ff1e56;
-}
-/*end of nav-bar */
-
-
-/*main content */
-.intro-text, .skills, .work-exp, footer {
-    width: 90%;
-    margin: 0 auto;
-    background-color: #0e0e0e;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #eeeeee;
-    padding: 0.3em;
-    margin-bottom: 0.7em;
-}
-
-.intro-text {
-    line-height: 170%;
-    padding: 0.8em;
-}
-
-.name{
-    color: #ffac41;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.skills h2, .work-exp h2, .skills ul{
-    padding: 0.2em;
-    font-size: 1.2em;
-}
-
-.work-exp h4{
-    margin-bottom: 0.35em;
-    margin-left: -1.25em;
-}
-
-.skills ul {
-    width: 78%;
-    font-size: 0.9em;
-    margin: 0 auto;
-    text-decoration: #ffac41;
-    font-family: 'Lucida Sans', 'Lucida Sans Unicode', 'Lucida Grande',  Arial, sans-serif
-}
-/*end of main content */
-
-/*footer */
+header,
+main,
 footer {
-        padding-left: 1em;
-        text-align: left;
-        font-size: 0.9em;
-        display: flex;
+    padding: 2em;
+    display: flex;
 }
 
-footer .number{
-    flex-grow: 1;
+/* animated typewriter */
+.header h1 {
+    font-family: -apple-system, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+    /* overflow-wrap: break-word; */
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.015em;
+    /* Adjust as needed */
+    animation:
+        typing 4.2s steps(30, end),
+        blink-caret .5s step-end infinite;
 }
-/*end of footer */
 
-/*media query for tablets */
-@media only screen and (min-width: 440px) {
-        body{
-            font-size: 1.1em;
-        }
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
 
-       .skills ul {
-        width: 80%;
-        }
-
-        .navbar img{
-            width: 25px;
-            height: 25px;
-        }
-}
-@media only screen and (min-width: 440px) {
-   .skills ul {
-    width: 87%;
+    to {
+        width: 100%
     }
 }
-/*end of media query for tablets */
 
-/*media query for desktops */
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange
+    }
+}
+
+/* end of animated typewriter */
+
+.contact-bar {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: start;
+    animation: cssAnimation 0s 3.65s forwards;
+    opacity: 0;
+}
+
+@keyframes cssAnimation {
+    to {
+        opacity: 1;
+    }
+}
+
+.contact-bar li {
+    flex: 0 0 4em;
+    text-align: start;
+}
+
+.contact-bar li:nth-child(2) {
+    margin-left: -1em;
+}
+
+.contact-bar a {
+    color: #7c7c7c;
+    text-decoration: none;
+}
+
+
+#height {
+    height: 35%;
+}
+
+main {
+    flex-direction: column;
+    padding-bottom: 0;
+}
+
+main h4 {
+    margin: 0.5em 0;
+}
+
+main section {
+    padding: 0.75em;
+    font-size: 0.845em;
+    margin-bottom: 0.35em;
+}
+
+main section a,
+footer a {
+    color: #fff;
+}
+
+.bp {
+    background-color: #03a340;
+
+}
+
+.cp {
+    background-color: #37636e;
+}
+
+.psb {
+    background-color: #2b2e4a;
+}
+
+.tsk {
+    background-color: #e84545;
+}
+
+.hlx {
+    background-color: #903749;
+    font-size: 0.75em;
+}
+
+.and {
+    background-color: #53354a;
+    font-size: 0.75em;
+}
+
+.skl {
+    padding: 0;
+    background-color: #333333;
+    margin-bottom: 0.85em;
+}
+
+.right {
+    float: right;
+}
+
+@media only screen and (min-width: 600px) {
+
+    /* For tablets: */
+    .header h1 {
+        font-size: 2.8em;
+    }
+
+    h4 {
+        font-size: 1.65em;
+    }
+
+    .bp,
+    .cp,
+    .psb,
+    .tsk,
+    .hlx,
+    .and,
+    .skl,
+    .contact-bar {
+        font-size: 1.4em;
+    }
+}
+
 @media only screen and (min-width: 768px) {
-    body{
-        font-size: 1.35em;
-    }
-    .skills ul {
-        width: 89%;
+
+    /* For desktop: */
+    header,
+    main,
+    footer {
+        padding: 8em;
     }
 
-    footer img{
-        width: 32px;
-        height: 32px;
+    #height {
+        height: 20%;
+    }
+
+    main {
+        padding-bottom: 1.5em;
     }
 }
-@media only screen and (min-width: 1024px) {
-    body{
-        font-size: 1.35em;
-    }
-    .skills ul {
-        width: 95%;
-    }
-
-
-    footer .number{
-        padding-top: 0.5em;
-    }
-    footer img{
-        width: 35px;
-        height: 35px;
-    }
-}
-/*end of media query for desktops */
